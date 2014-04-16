@@ -1,0 +1,44 @@
+/*----- External -----*/
+@import url("http://fonts.googleapis.com/css?family=Roboto:100,300");
+
+/*----- Base -----*/
+* {margin:0; padding:0}
+body {font-family: "Roboto", Helvetica, Arial, sans-serif; font-size:12px; font-weight:300; line-height:1.5em; background:#544627 url("../img/bg.png") repeat; text-shadow:0 1px 0 #252c32; margin:0px; padding:0px}
+a {color:#ECDEBD; border:0; outline:none; text-decoration:none; transition:color 0.2s}
+a:hover, a:focus {color:#FFF}
+p {margin:0 0 15px 0}
+img {border:0}
+h1, h2, h3, h4, h5 {font-family: "Roboto", Helvetica, Arial, sans-serif; font-weight:100}
+
+/*----- Main wrapper -----*/
+#wrapper {width:840px; margin:20px auto; padding:60px 0 0 0; overflow:hidden; position:relative}
+
+/*----- Logo -----*/
+.header {width:505px; height:42px; float:left; margin:0 0 20px 0; font-size:20px; color:#ECDEBD; padding-top:78px; background:url("../img/header.png") no-repeat}
+
+/*----- Content container -----*/
+#content {width:840px; float:left; margin:0 0 30px 0; background:url("../img/content_bg.png") no-repeat bottom}
+#content .info {width:505px; font-size:18px; float:left}
+#content .pitch {width:505px; height:275px; float:left; color:#DBBB79; padding:0; line-height:1.5em}
+#content .pitch ul {margin:20px 0 0 0; color:#ECDEBD; list-style-type:none}
+#content .pitch li {padding:3px 0 3px 30px; background:url("../img/bullet_check.png") no-repeat 0 7px}
+
+/*----- Button container -----*/
+#content .actions {width:500px; float:left; margin-bottom:13px; padding:0 25px}
+#content .actions p {color:#FFF; font-size:32px; font-weight:100; float:left; line-height: 60px; margin:0; text-shadow:0 3px 3px #252c32}
+
+/*------ Phone container ------*/
+#content .phone {background:url("../img/nexus.png") no-repeat 0 0; width:260px; height:456px; float:right; margin:5px 35px 0 0; position: relative}
+#content .screenshots {margin:37px 0 0 27px}
+#content .screenshots img {width:205px; height:365px}
+#content .reflection {width:260px; height:190px; background:url("../img/reflection.png") no-repeat 0 0; position:absolute; z-index:9999}
+
+/*------ Footer ------*/
+#footer {width:840px; float:left; margin:0; color:#DBBB79}
+#footer .copyright {float:left}
+#footer .divider {height:16px; width:16px; background:url("../img/footer_divider.png") no-repeat bottom; margin:0 10px; float:right}
+#footer .more a {float:right}
+
+/*------ Radial background ------*/
+.radial-bg {position:fixed; top:0; width:100%; height:100%; z-index:-1}
+.radial-bg img {width:100%; height:100%}
