@@ -1,0 +1,21 @@
+{
+  "name": "carteiroapp.com",
+  "version": "0.1.0",
+  "description": "Carteiro for Android website",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Bardini",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-minify-html": "^1.0.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-uncss": "^1.0.1"
+  }
+}
