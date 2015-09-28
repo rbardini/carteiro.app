@@ -7,7 +7,7 @@ var uncss = require('gulp-uncss')
 var csso = require('gulp-csso')
 
 gulp.task('clean', function (callback) {
-  del(['dist/'], callback)
+  return del(['dist/'])
 })
 
 gulp.task('html', ['clean'], function () {

@@ -10,12 +10,12 @@
   "author": "Rafael Bardini",
   "license": "MIT",
   "devDependencies": {
-    "del": "^1.2.0",
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.5.2",
+    "gulp-concat": "^2.6.0",
     "gulp-csso": "^1.0.0",
-    "gulp-minify-html": "^1.0.3",
-    "gulp-uglify": "^1.2.0",
-    "gulp-uncss": "^1.0.1"
+    "gulp-minify-html": "^1.0.4",
+    "gulp-uglify": "^1.4.1",
+    "gulp-uncss": "^1.0.4"
   }
 }
