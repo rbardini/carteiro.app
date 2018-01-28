@@ -2,13 +2,32 @@
   "name": "carteiroapp.com",
   "version": "0.1.0",
   "description": "Carteiro for Android website",
-  "main": "index.js",
+  "author": "Rafael Bardini",
+  "homepage": "http://carteiroapp.com",
+  "keywords": [
+    "correios",
+    "ect",
+    "sro",
+    "postal",
+    "mail",
+    "package",
+    "tracking",
+    "shipping",
+    "brazil"
+  ],
   "scripts": {
     "start": "./node_modules/.bin/gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Rafael Bardini",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/rbardini/carteiroapp.com"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/rbardini/carteiroapp.com/issues"
+  },
+  "license": "UNLICENSED",
+  "private": true,
   "devDependencies": {
     "del": "3.0.0",
     "gulp": "3.9.1",
