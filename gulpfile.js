@@ -47,10 +47,10 @@ gulp.task('styles', ['clean'], function () {
       'src/styles/colors/amber-blue.css'
     ])
     .pipe(concat('main.css'))
-    // .pipe(uncss({
-    //   html: ['index.html'],
-    //   ignore: [/\.nivo-lightbox-.*/, /\.owl-.*/]
-    // }))
+    .pipe(uncss({
+      html: ['dist/index.html'],
+      ignore: [/\.nivo-lightbox-.*/, /\.owl-.*/]
+    }))
     .pipe(csso())
     .pipe(gulp.dest('dist/css/'))
 })
