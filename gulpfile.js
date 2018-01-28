@@ -1,23 +1,25 @@
-var del = require('del')
-var gulp = require('gulp')
-var concat = require('gulp-concat')
-var minifyHtml = require('gulp-minify-html')
-var uglify = require('gulp-uglify')
-var uncss = require('gulp-uncss')
-var csso = require('gulp-csso')
+const del = require('del')
+const gulp = require('gulp')
+const concat = require('gulp-concat')
+const minifyHtml = require('gulp-minify-html')
+const uglify = require('gulp-uglify')
+const uncss = require('gulp-uncss')
+const csso = require('gulp-csso')
 
-gulp.task('clean', function (callback) {
-  return del(['dist/'])
-})
+gulp.task('clean', () =>
+  del(['dist/'])
+)
 
-gulp.task('html', ['clean'], function () {
-  return gulp.src('src/index.html')
+gulp.task('html', ['clean'], () =>
+  gulp
+    .src('src/index.html')
     .pipe(minifyHtml())
     .pipe(gulp.dest('dist/'))
-})
+)
 
-gulp.task('scripts', ['clean'], function () {
-  return gulp.src([
+gulp.task('scripts', ['clean'], () =>
+  gulp
+    .src([
       'src/scripts/jquery.min.js',
       'src/scripts/jquery.throttle-debounce.min.js',
       'src/scripts/jquery.nav.min.js',
@@ -31,10 +33,11 @@ gulp.task('scripts', ['clean'], function () {
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js/'))
-})
+)
 
-gulp.task('styles', ['clean'], function () {
-  return gulp.src([
+gulp.task('styles', ['clean'], () =>
+  gulp
+    .src([
       'src/styles/elegant-icons.css',
       'src/styles/bootstrap.min.css',
       'src/styles/owl-carousel.css',
@@ -53,16 +56,17 @@ gulp.task('styles', ['clean'], function () {
     }))
     .pipe(csso())
     .pipe(gulp.dest('dist/css/'))
-})
+)
 
-gulp.task('assets', ['clean'], function () {
-  return gulp.src([
+gulp.task('assets', ['clean'], () =>
+  gulp
+    .src([
       'src/apple-touch-icon.png',
       'src/favicon.ico',
       'src/fonts/**/*',
       'src/images/**/*'
     ], { base: 'src/' })
     .pipe(gulp.dest('dist/'))
-})
+)
 
 gulp.task('default', ['html', 'scripts', 'styles', 'assets'])
