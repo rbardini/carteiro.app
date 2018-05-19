@@ -1,9 +1,9 @@
 {
-  "name": "carteiroapp.com",
+  "name": "carteiro.app",
   "version": "0.1.0",
   "description": "Carteiro for Android website",
   "author": "Rafael Bardini",
-  "homepage": "http://carteiroapp.com",
+  "homepage": "https://carteiro.app",
   "keywords": [
     "correios",
     "ect",
@@ -21,10 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/rbardini/carteiroapp.com"
+    "url": "https://bitbucket.org/rbardini/carteiro.app"
   },
   "bugs": {
-    "url": "https://bitbucket.org/rbardini/carteiroapp.com/issues"
+    "url": "https://bitbucket.org/rbardini/carteiro.app/issues"
   },
   "license": "UNLICENSED",
   "private": true,
