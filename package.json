@@ -20,7 +20,7 @@
     "build:html": "html-minifier src/index.html -o dist/index.html --collapse-whitespace",
     "build:scripts": "uglifyjs src/app.js -o dist/app.js",
     "build:styles": "csso src/main.css -o dist/main.css",
-    "build:assets": "cp -v src/*.{ico,svg,png} dist",
+    "build:assets": "cp -v src/*.ico src/*.svg src/*.png dist",
     "cleanup": "rm -rf dist",
     "postcleanup": "mkdir dist",
     "prebuild": "npm run cleanup",
