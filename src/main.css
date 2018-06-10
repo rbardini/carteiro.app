@@ -1,0 +1,60 @@
+:root {
+  --backgroundColor: #fff;
+  --primaryColor: #1b1b1b;
+  --secondaryColor: #6d6d6d;
+  --bodyFontStack: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --headingFontStack: "Roboto Slab", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+html {background: var(--backgroundColor); color: var(--primaryColor); font: 62.5%/1.618 var(--bodyFontStack)}
+body {margin: 8vw}
+
+h1 {font: bold 2.5em/1.2 var(--headingFontStack); font-weight: 700; margin: 0}
+p {margin: 0 0 1em}
+a {color: inherit}
+
+blockquote {display: none; font-size: 0.8em; margin: 0; opacity: 0; text-align: center}
+blockquote:first-of-type {display: block; opacity: 1}
+blockquote > p {color: var(--secondaryColor); font-style: italic; margin-bottom: 0}
+
+cite {font-style: normal}
+cite:before {content: "—\00a0"}
+
+header {grid-area: header; padding-top: 2em}
+header > p {color: var(--secondaryColor); margin: 0}
+article {grid-area: body}
+
+.content {
+  display: grid;
+  font-size: 2.4em;
+  grid-gap: 1em .5em;
+  grid-template-areas: "logo header  device"
+                       "logo body    device";
+  grid-template-columns: min-content 1.618fr 1fr;
+  grid-template-rows: min-content 1fr;
+  margin: 0 auto;
+  max-width: 45em;
+}
+
+.logo {grid-area: logo; padding-top: 2.3em; width: 2.4em}
+.device {grid-area: device; margin-left: 1em; max-width: 100%}
+.badge {margin-bottom: 1em; width: 10em}
+
+@media screen and (max-width: 60em) {
+  .content {font-size: 1.8em}
+}
+
+@media screen and (max-width: 40em) {
+  header {padding-top: 1em}
+  article {text-align: center}
+
+  .content {
+    grid-template-areas: "logo   logo"
+                         "header device"
+                         "body   body";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+  }
+
+  .logo {display: none}
+}
