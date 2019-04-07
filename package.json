@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "npm-run-all --parallel build:*",
-    "build:html": "html-minifier src/index.html -o dist/index.html --collapse-whitespace",
+    "build:html": "html-minifier --file-ext html --input-dir src --output-dir dist --collapse-whitespace",
     "build:scripts": "uglifyjs src/app.js -o dist/app.js",
     "build:styles": "csso src/main.css -o dist/main.css",
     "build:assets": "cp -v src/*.ico src/*.svg src/*.png dist",
