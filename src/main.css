@@ -46,7 +46,7 @@ article {grid-area: body}
 
 @media screen and (max-width: 40em) {
   header {padding-top: 1em}
-  article {text-align: center}
+  .home article {text-align: center}
 
   .content {
     grid-template-areas: "logo   logo"
