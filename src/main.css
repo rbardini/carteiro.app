@@ -1,9 +1,18 @@
 :root {
-  --backgroundColor: #fff;
-  --primaryColor: #1b1b1b;
-  --secondaryColor: #6d6d6d;
+  color-scheme: light dark;
+  --backgroundColor: #fafafa;
+  --primaryColor: rgba(0, 0, 0, .8);
+  --secondaryColor: rgba(0, 0, 0, .44);
   --bodyFontStack: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   --headingFontStack: "Roboto Slab", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #121212;
+    --primaryColor: rgba(255, 255, 255, .8);
+    --secondaryColor: rgba(255, 255, 255, .44);
+  }
 }
 
 html {background: var(--backgroundColor); color: var(--primaryColor); font: 62.5%/1.618 var(--bodyFontStack)}
