@@ -47,6 +47,7 @@ article {grid-area: body}
 
 .logo {grid-area: logo; padding-top: 2.3em; width: 2.4em}
 .device {grid-area: device; margin-left: 1em; max-height: 30em; max-width: 100%}
+.device > img {width: 100%}
 .badge {margin-bottom: 1em; width: 10em}
 
 @media screen and (max-width: 60em) {
