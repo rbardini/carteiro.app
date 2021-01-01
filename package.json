@@ -1,7 +1,7 @@
 {
   "name": "carteiro.app",
-  "version": "0.1.0",
-  "description": "Carteiro for Android website",
+  "version": "1.0.0",
+  "description": "Carteiro for Android's website",
   "author": "Rafael Bardini",
   "homepage": "https://carteiro.app",
   "keywords": [
@@ -29,12 +29,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/rbardini/carteiro.app"
+    "url": "git+https://github.com/rbardini/carteiro.app.git"
   },
   "bugs": {
-    "url": "https://bitbucket.org/rbardini/carteiro.app/issues"
+    "url": "https://github.com/rbardini/carteiro.app/issues"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "devDependencies": {
     "csso-cli": "3.0.0",
