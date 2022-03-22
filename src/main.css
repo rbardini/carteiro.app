@@ -48,6 +48,7 @@ article {grid-area: body}
 .logo {grid-area: logo; padding-top: 2.3em; width: 2.4em}
 .device {grid-area: device; margin-left: 1em; max-height: 30em; max-width: 100%}
 .device > img {width: 100%}
+.device::after {background: black; border-radius: 100%; content: ""; display: block; filter: blur(0.1em); height: 0.2em; margin: -1em auto 0; position: relative; width: 80%; z-index: -1}
 .badge {margin-bottom: 1em; width: 10em}
 
 @media screen and (max-width: 60em) {
