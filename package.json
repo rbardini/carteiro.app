@@ -40,6 +40,6 @@
     "csso-cli": "3.0.0",
     "html-minifier": "4.0.0",
     "npm-run-all": "4.1.5",
-    "terser": "5.3.2"
+    "terser": "5.12.1"
   }
 }
