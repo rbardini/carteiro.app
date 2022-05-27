@@ -12,7 +12,6 @@ const footnote = require('markdown-it-footnote')
 const permalinks = require('@metalsmith/permalinks')
 const sitemap = require('metalsmith-sitemap')
 const layouts = require('@metalsmith/layouts')
-const postcss = require('metalsmith-postcss')
 const htmlMinifier = require('metalsmith-html-minifier')
 const serve = require('metalsmith-serve')
 const watch = require('metalsmith-watch')
@@ -82,15 +81,7 @@ Metalsmith(__dirname)
   .use(layouts({
     pattern: '**/*.html',
     default: 'article.pug',
-    moment: moment
-  }))
-  .use(postcss({
-    plugins: {
-      'postcss-color-mod-function': {},
-      'postcss-preset-env': {},
-      cssnano: { autoprefixer: false }
-    },
-    map: argv.development
+    moment
   }))
   .use(renamer({
     css: {
