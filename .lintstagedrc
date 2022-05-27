@@ -1,0 +1,5 @@
+{
+  "*.js": "eslint --fix",
+  "*.md": "markdownlint",
+  "src/posts/*.md": "matter-now"
+}

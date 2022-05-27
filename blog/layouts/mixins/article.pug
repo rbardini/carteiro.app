@@ -1,0 +1,16 @@
+mixin article(type, title, date, link, contents, path)
+  - var className = [type, link && "link"]
+  - var isPage = type === "page"
+  article(class=className)
+    header
+      unless isPage
+        ul.meta.inline-list
+          li
+            a(href="/blog/" + path, rel="bookmark", title="Permalink")
+              time(datetime=date)= date.format("ll")
+      h1
+        if isPage
+          = title
+        else
+          a(href=(link || "/blog/" + path))= title
+    .entry!= contents
