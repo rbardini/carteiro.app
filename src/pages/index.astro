@@ -1,0 +1,118 @@
+---
+import { author, homepage, name } from '../../package.json'
+import Analytics from '../components/Analytics.astro'
+import '../styles/home.css'
+
+const icon = new URL('apple-touch-icon.png', homepage).href
+const trackingId = import.meta.env.PUBLIC_TRACKING_ID
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Carteiro para Android</title>
+    <meta name="description" content="O aplicativo perfeito para acompanhar suas encomendas pelos Correios" />
+    <meta name="keywords" content="aplicativo, app, carteiro, android, rastreamento, rastreio, correios, ect, sro, encomendas, pacotes, postal, sedex, pac" />
+    <meta name="author" content={author} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#ffc107" />
+
+    <meta property="og:title" content="Carteiro para Android" />
+    <meta property="og:description" content="O aplicativo perfeito para acompanhar suas encomendas pelos Correios. Nunca mais perca uma entrega ou esqueça de buscar seu pacote. O Carteiro lhe avisa como você quiser, quando você precisar." />
+    <meta property="og:url" content={homepage} />
+    <meta property="og:image" content={icon} />
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content={name} />
+    <meta property="fb:admins" content="692146574" />
+
+    <link rel="icon" sizes="192x192" href="apple-touch-icon.png" />
+    <link rel="alternate" href="/blog/rss.xml" type="application/rss+xml" title="RSS" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&family=Roboto+Slab:wght@700&display=swap" />
+
+    {trackingId && <Analytics {trackingId} />}
+  </head>
+  <body class="home">
+    <div class="content">
+      <img src="logo.svg" class="logo" alt="" />
+
+      <header>
+        <h1>Carteiro</h1>
+        <p>Seu assistente pessoal para objetos&nbsp;postais</p>
+      </header>
+
+      <article>
+        <p>Nunca mais perca uma entrega ou esqueça de buscar seu pacote. O Carteiro lhe avisa como você quiser, quando você&nbsp;precisar.</p>
+
+        <a href="https://play.google.com/store/apps/details?id=com.rbardini.carteiro&referrer=utm_source%3Dlanding">
+          <img src="badge.png" class="badge" alt="Disponível no Google Play" />
+        </a>
+
+        <blockquote>
+          <p>“Carteiro é um gerenciador completo e perfeito para encomendas do Correio. Não é só um aplicativo que rastreia produtos, ele também organiza todo o conteúdo recebido e enviado por um&nbsp;usuário.”</p>
+          <cite><a href="https://www.techtudo.com.br/tudo-sobre/carteiro.html">TechTudo</a></cite>
+        </blockquote>
+        <blockquote>
+          <p>“Quem procura um jeito prático e eficaz de controlar encomendas enviadas pelo Correio acabou de encontrar. O Carteiro faz tudo isso de um jeito simples e é gratuito, reunindo várias informações em um só lugar de um jeito inteligente e sem apresentar qualquer ponto&nbsp;negativo.”</p>
+          <cite><a href="https://www.baixaki.com.br/android/download/carteiro.htm">Baixaki</a></cite>
+        </blockquote>
+        <blockquote>
+          <p>“As opções de sincronização e notificação são totalmente configuráveis, e o app é bem intuitivo, facilitando a vida de quem compra, vende ou recebe itens dos&nbsp;Correios.”</p>
+          <cite><a href="https://www.showmetech.com.br/mobile/android/showmetech-top-apps-android-edicao-especial-material-design/">Showmetech</a></cite>
+        </blockquote>
+      </article>
+
+      <picture class="device">
+        <source srcset="device-dark.png" media="(prefers-color-scheme: dark)" />
+        <img src="device.png" alt="" />
+      </picture>
+    </div>
+  </body>
+</html>
+
+<script is:inline>
+  const FADE_INTERVAL = 5000
+  const FADE_STEP = 60 / 3000
+
+  const blockquotes = document.querySelectorAll('blockquote')
+  const count = blockquotes.length
+
+  function fadeOut(el, cb) {
+    el.style.opacity = getComputedStyle(el).getPropertyValue('opacity')
+
+    ;(function fade() {
+      const opacity = +el.style.opacity - FADE_STEP
+
+      if (opacity >= 0) {
+        el.style.opacity = opacity
+        return requestAnimationFrame(fade)
+      }
+
+      el.style.display = 'none'
+      cb()
+    })()
+  }
+
+  function fadeIn(el, cb) {
+    el.style.opacity = getComputedStyle(el).getPropertyValue('opacity')
+    el.style.display = 'block'
+
+    ;(function fade() {
+      const opacity = +el.style.opacity + FADE_STEP
+
+      if (opacity <= 1) {
+        el.style.opacity = opacity
+        return requestAnimationFrame(fade)
+      }
+
+      cb()
+    })()
+  }
+
+  ;(function fadeInOut(index) {
+    const blockquote = blockquotes[index]
+
+    fadeIn(blockquote, function() {
+      setTimeout(fadeOut.bind(null, blockquote, fadeInOut.bind(null, (index + 1) % count)), FADE_INTERVAL)
+    })
+  })(0)
+</script>

@@ -1,0 +1,98 @@
+@keyframes fade {
+  0%  { opacity: 1 } 25%  { opacity: 1 }
+  75% { opacity: 0 } 100% { opacity: 0 }
+}
+
+:root {
+  color-scheme: light dark;
+  --bgColor: #fff8e1; /* Amber 50 */
+  --bodyColor: hsla(0, 0%, 0%, .8);
+  --infoColor: hsla(0, 0%, 0%, .44);
+  --borderColor: hsla(0, 0%, 0%, .1);
+  --linkColor: hsl(0, 0%, 0%);
+  --hoverColor: #5d4037; /* Brown 700 */
+  --heartColor: #f44336 /* Red 500 */;
+  --bodyFontStack: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --headingFontStack: "Roboto Slab", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --codeFontStack: "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  --embedShadow: 0 1em 4em rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgColor: #121212; /* Surface */
+    --bodyColor:hsla(0, 0%, 100%, .8);
+    --infoColor:hsla(0, 0%, 100%, .44);
+    --borderColor:hsla(0, 0%, 100%, .1);
+    --linkColor: hsl(0, 0%, 100%);
+    --hoverColor: #ffe082; /* Amber 200 */
+  }
+}
+
+* {box-sizing: border-box}
+html, input, textarea {background: var(--bgColor); color: var(--bodyColor); font: 300 62.5%/1.5 var(--bodyFontStack)}
+body {margin: 0}
+sub, sup {font-size: 75%; line-height: 0}
+input, textarea {border: 0; border-bottom: 1px solid var(--linkColor); font-size: 1em}
+fieldset {border: 0; margin: 0; padding: 0}
+pre, code {font-family: var(--codeFontStack); hyphens: none; overflow-wrap: break-word; text-align: initial; width: 100%}
+pre {margin-left: -1em; margin-right: -1em; width: auto; white-space: pre-wrap}
+pre > code {display: block; padding: 1em}
+:not(pre) > code {background: var(--borderColor); padding: .1em .2em}
+iframe {border: 0}
+img {max-width: 100%}
+a {color: var(--linkColor); font-weight: 400; text-decoration: none; transition: color 0.2s}
+a:hover, a:active {color: var(--hoverColor); outline: 0}
+p {margin: 1em 0}
+p a {text-decoration: underline}
+p img {box-shadow: var(--embedShadow); display: block; margin: 0 auto}
+
+hr {border: 0; border-top: 2px solid var(--borderColor); height: 0}
+
+h1, h2, h3, h4, h5, h6 {font-family: var(--headingFontStack), sans-serif; line-height: 1.2; margin: 1.6em 0 0.4em}
+h1 {font-size: 2.441em}
+h2 {font-size: 1.953em}
+h3 {font-size: 1.563em}
+h4 {font-size: 1.25em}
+h5 {font-size: 1em}
+h6 {font-size: 0.8em}
+
+blockquote {border-left: 4px solid var(--borderColor); margin: 1em 0 1em -1em; padding-left: calc(1em - 4px)}
+blockquote p {font-style: italic}
+blockquote cite {color: var(--infoColor)}
+blockquote cite:before {content: " — "}
+.pullquote {border: 0; margin: 1.2em 2.4em}
+.pullquote:before {content: "“"; float: left; font-size: 3.6em; line-height: 1; margin: -0.2em 0 0 -0.4em}
+.pullquote p {font-size: 1.2em; text-align: center}
+.pullquote footer {text-align: right}
+
+figure {margin: 1em -3em; text-align: center}
+figure > img:not([alt="Caminhão"]) {box-shadow: var(--embedShadow)}
+.image-comparison { display: grid }
+.image-comparison > img { grid-area: 1 / 1 }
+.image-comparison > img:first-of-type { animation: 2s ease-in-out infinite alternate fade }
+
+#content {font-size: 1.6em; margin: 0 auto; max-width: 40em; padding: 1em}
+main {border-bottom: 2px solid var(--borderColor); padding-bottom: 2em}
+article:not(:last-of-type):after {content: "* * *"; color: var(--borderColor); display: block; margin: 4em 0; text-align: center}
+header[role="banner"] {text-align: center; margin-bottom: 1em}
+header h1 {margin: 0}
+header h1 a {font-weight: inherit}
+.link header h1 {font-size: 1.953em}
+.link header h1:after {color: var(--infoColor); content:"\00A0→"}
+.meta a {color: var(--infoColor); font-weight: inherit}
+.meta a:hover {text-decoration: underline}
+.meta, .date, .footnotes, figcaption, nav, aside, footer[role="contentinfo"] {color: var(--infoColor); font-size: 0.8em; margin: 0; text-align: center}
+.meta, .date, .footnotes {text-align: inherit}
+.footnotes {border-top: 2px solid var(--borderColor)}
+.unstyled-list {list-style: none}
+.sr-only {border: 0; clip: rect(0, 0, 0, 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px}
+
+@media screen and (max-width: 70em) {
+  #content {font-size: 1.4em}
+  figure {margin-left: -1em; margin-right: -1em}
+}
+
+@supports (hyphens: auto) {
+  article p {hyphens: auto; text-align: justify}
+}
