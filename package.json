@@ -34,14 +34,14 @@
     "start": "astro dev"
   },
   "devDependencies": {
-    "@astrojs/preact": "0.1.2",
-    "@astrojs/sitemap": "0.1.0",
-    "@types/luxon": "2.3.2",
+    "@astrojs/preact": "0.5.2",
+    "@astrojs/sitemap": "0.3.0",
+    "@types/luxon": "3.0.0",
     "astro": "0.26.1",
     "husky": "8.0.1",
-    "lint-staged": "12.4.2",
-    "luxon": "2.4.0",
-    "markdownlint-cli": "0.31.1",
+    "lint-staged": "13.0.3",
+    "luxon": "3.0.1",
+    "markdownlint-cli": "0.32.1",
     "matter-now": "3.0.0"
   }
 }
