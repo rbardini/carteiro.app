@@ -10,7 +10,7 @@ const { post } = Astro.props as Props
 
 <li class="archive-item">
   <time class="date" datetime={post.date}>{post.dateTime.toFormat('d LLL')}</time>
-  <a href={post.slug}>{post.title}</a>
+  <a href={`/blog/${post.slug}`}>{post.title}</a>
 </li>
 
 <style>
