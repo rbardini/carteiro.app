@@ -36,12 +36,12 @@
   "devDependencies": {
     "@astrojs/preact": "0.5.2",
     "@astrojs/sitemap": "0.3.0",
-    "@types/luxon": "3.0.0",
+    "@types/luxon": "3.3.0",
     "astro": "0.26.1",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
-    "luxon": "3.0.1",
-    "markdownlint-cli": "0.32.1",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.2",
+    "luxon": "3.3.0",
+    "markdownlint-cli": "0.34.0",
     "matter-now": "3.0.0"
   }
 }
