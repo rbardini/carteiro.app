@@ -16,7 +16,7 @@
 }
 
 html {background: var(--backgroundColor); color: var(--primaryColor); font: 300 62.5%/1.618 var(--bodyFontStack)}
-body {margin: 8vw}
+body {margin: 4vw 8vw}
 
 h1 {font: bold 2.5em/1.2 var(--headingFontStack); font-weight: 700; margin: 0}
 p {margin: 0 0 1em}
@@ -38,14 +38,16 @@ article {grid-area: body}
   font-size: 2.4em;
   grid-gap: 1em .5em;
   grid-template-areas:
-    "logo header  device"
-    "logo body    device";
+    "banner banner banner"
+    "logo   header device"
+    "logo   body   device";
   grid-template-columns: min-content 1.618fr 1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content min-content 1fr;
   margin: 0 auto;
   max-width: 45em;
 }
 
+.banner {border: 1px solid var(--secondaryColor); border-radius: 0.5em; font-size: 0.6em; grid-area: banner; padding: .5em 1em; place-self: center; text-align: center; width: fit-content}
 .logo {grid-area: logo; padding-top: 2.3em; width: 2.4em}
 .device {grid-area: device; margin-left: 1em; max-height: 30em; max-width: 100%}
 .device > img {width: 100%}
@@ -62,11 +64,12 @@ article {grid-area: body}
 
   .content {
     grid-template-areas:
+      "banner banner"
       "logo   logo"
       "header device"
       "body   body";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content;
+    grid-template-rows: min-content min-content min-content;
   }
 
   .logo {display: none}
