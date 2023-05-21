@@ -9,4 +9,4 @@ Obrigado pela compreensão e apoio,
 
 Rafael Bardini
 
-**Atualização 17/06:** o WebSRO está de volta, e o Carteiro também :)
+> **Atualização 17/06/2016:** o WebSRO está de volta, e o Carteiro também :)

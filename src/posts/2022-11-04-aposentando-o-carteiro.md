@@ -20,10 +20,12 @@ Os Correios fecharam a última porta na semana passada, quando puxaram da tomada
 
 Apesar do sucesso, o Carteiro sempre foi um _hobby_, sem qualquer retorno financeiro significativo. Resisti a colocar propagandas, porque meu principal objetivo era criar um produto agradável, focado na experiência do usuário e respeitando sua privacidade. Mas como a maioria dos meus hobbies, eventualmente me cansei dele. Não apenas isso, hoje tenho diferentes prioridades, e pouca motivação para contribuir conteúdo aos jardins murados de gigantes da tecnologia.
 
-Chegou a hora do Carteiro pendurar o boné e ter um merecido descanso. A todos os destinatários e remetentes que confiaram no meu trabalho, meu sincero muito obrigado. E quem sabe, abrindo o código fonte do projeto e com apoio da comunidade, ele não faça uma nova tentativa de entrega?
+Chegou a hora do Carteiro pendurar o boné e ter um merecido descanso. A todos os destinatários e remetentes que confiaram no meu trabalho, meu sincero muito obrigado. E quem sabe, abrindo o código-fonte do projeto e com apoio da comunidade, ele não faça uma nova tentativa de entrega?
 
 Um abraço!
 
 Rafael Bardini
+
+> **Atualização 21/05/2023:** o código-fonte do Carteiro foi [liberado](/blog/codigo-fonte-carteiro-liberado).
 
 [^1]: Lembra do [SRO](https://web.archive.org/web/20120108230723/http://websro.correios.com.br:80/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI=SI054542659BR)?
