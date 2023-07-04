@@ -1,6 +1,5 @@
 ---
 import { author } from '../../package.json'
-import Analytics from './Analytics.astro'
 import '../styles/blog.css'
 
 export interface Props {
@@ -9,7 +8,6 @@ export interface Props {
 
 const { title } = Astro.props as Props
 const name = 'Blog do Carteiro'
-const trackingId = import.meta.env.PUBLIC_TRACKING_ID
 ---
 
 <meta charset="utf-8" />
@@ -20,4 +18,3 @@ const trackingId = import.meta.env.PUBLIC_TRACKING_ID
 <link rel="alternate" href="/blog/rss.xml"  type="application/rss+xml" title="RSS" />
 <link rel="sitemap" href="/sitemap.xml" type="application/xml" title="Sitemap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&family=Roboto+Slab:wght@700&display=swap" />
-{trackingId && <Analytics {trackingId} />}

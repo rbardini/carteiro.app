@@ -1,10 +1,8 @@
 ---
 import { author, homepage, name } from '../../package.json'
-import Analytics from '../components/Analytics.astro'
 import '../styles/home.css'
 
 const icon = new URL('apple-touch-icon.png', homepage).href
-const trackingId = import.meta.env.PUBLIC_TRACKING_ID
 ---
 
 <html lang="pt-BR">
@@ -28,8 +26,6 @@ const trackingId = import.meta.env.PUBLIC_TRACKING_ID
     <link rel="icon" sizes="192x192" href="apple-touch-icon.png" />
     <link rel="alternate" href="/blog/rss.xml" type="application/rss+xml" title="RSS" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&family=Roboto+Slab:wght@700&display=swap" />
-
-    {trackingId && <Analytics {trackingId} />}
   </head>
   <body class="home">
     <div class="content">
